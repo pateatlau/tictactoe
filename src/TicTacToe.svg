@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="58" viewBox="0 0 43 58">
+  <defs>
+    <style>
+      .a {
+        fill: #fff;
+        font-size: 14px;
+        font-family: Poppins-Black, Poppins, Sans-Serif;
+        font-weight: 800;
+        letter-spacing: 0.433em;
+      }
+      .b {
+        letter-spacing: 0.2em;
+      }
+      .c {
+        letter-spacing: 0.292em;
+      }
+    </style>
+  </defs>
+  <text class="a" transform="translate(0 15)">
+    <tspan x="0" y="0">TIC</tspan>
+    <tspan class="b">
+      <tspan x="0" y="19">TAC</tspan>
+    </tspan>
+    <tspan class="c">
+      <tspan x="0" y="38">TOE</tspan>
+    </tspan>
+  </text>
+</svg>

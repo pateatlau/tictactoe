@@ -1,0 +1,35 @@
+.center-column {
+  background-color: #253952;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.winning-player-box {
+  align-items: center;
+  border: 2px solid #fb9e01;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 256px;
+  justify-content: center;
+  margin: 15px 0;
+  width: 230px;
+}
+
+.winning-player-symbol {
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.winning-player-number {
+  color: #fb9e01;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.winning-player-name {
+  font-size: 24px;
+}

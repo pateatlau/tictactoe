@@ -1,0 +1,27 @@
+.players-form {
+  margin: 75px auto;
+  width: 300px;
+}
+
+.form-title-container {
+  font-size: 24px;
+  font-weight: 300px;
+  height: 60px;
+  letter-spacing: 0.83px;
+  line-height: 25px;
+}
+
+.form-title-container .game-name {
+  color: #fba202;
+}
+
+.submit-button {
+  background: transparent linear-gradient(270deg, #fba202 0%, #ff5800 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 2px;
+  box-shadow: 0px 3px 6px #000;
+  color: #fff;
+  height: 49px;
+  opacity: 1;
+  width: 100%;
+}

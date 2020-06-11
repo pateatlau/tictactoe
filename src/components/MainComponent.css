@@ -1,0 +1,40 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-column,
+.center-column,
+.right-column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.left-column {
+  width: 420px;
+}
+
+.center-column {
+  border: 2px dashed #fff;
+  border-radius: 46px;
+  opacity: 0.89;
+  width: 480px;
+}
+
+.center-column .nested-container {
+  background-color: #253952;
+  border: 2px solid #111;
+  border-radius: 46px;
+  height: 450px;
+  margin: 15px;
+  opacity: 0.9;
+  width: 450px;
+}
+
+.right-column {
+  width: 420px;
+}

@@ -1,0 +1,71 @@
+.row {
+  display: flex;
+}
+
+.square {
+  align-items: center;
+  background-color: #253952;
+  border: 1px dashed #000;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 100px;
+  font-weight: 900;
+  height: 148px;
+  justify-content: center;
+  outline: none;
+  width: 148px;
+}
+
+.square-winning-color {
+  color: #f00;
+}
+
+.square:hover {
+  background-color: #334d6d;
+}
+
+.squares-row-1 .square {
+  border-top: none;
+}
+
+.squares-row1 .square:nth-of-type(1) {
+  border-left: none;
+  border-radius: 46px 0 0 0;
+}
+
+.squares-row1 .square:nth-of-type(3) {
+  border-radius: 0 46px 0 0;
+  border-right: none;
+}
+
+.squares-row-2 .square {
+  border-bottom: none;
+  border-top: none;
+}
+
+.squares-row2 .square:nth-of-type(1) {
+  border-left: none;
+}
+
+.squares-row2 .square:nth-of-type(3) {
+  border-right: none;
+}
+
+.squares-row-3 .square {
+  border-bottom: none;
+}
+
+.squares-row3 .square:nth-of-type(1) {
+  border-left: none;
+  border-radius: 0 0 0 46px;
+}
+
+.squares-row3 .square:nth-of-type(3) {
+  border-radius: 0 0 46px 0;
+  border-right: none;
+}
+
+.disable-square {
+  pointer-events: none;
+}

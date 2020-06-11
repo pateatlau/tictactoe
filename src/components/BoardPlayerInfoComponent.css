@@ -1,0 +1,36 @@
+.player-box {
+  align-items: center;
+  background-color: #253952;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 137px;
+  justify-content: center;
+  margin: 15px 0;
+  width: 123px;
+}
+
+.highlight-player-box {
+  border: 2px solid #fb9e01;
+}
+
+.player-symbol {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.scores-container {
+  display: flex;
+  justify-content: space-around;
+  width: 123px;
+}
+
+.player-number {
+  color: #fb9e01;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.player-name {
+  font-size: 20px;
+}

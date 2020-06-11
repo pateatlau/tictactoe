@@ -1,0 +1,13 @@
+.tic-tac-toe-logo-container {
+  display: flex;
+  padding: 47px 0 0 68px;
+}
+
+.tic-tac-toe-logo {
+  background: transparent url("./../TicTacToe.png") 0% 0% no-repeat padding-box;
+  font-family: Roboto, sans-serif;
+  height: 58px;
+  opacity: 1;
+  pointer-events: none;
+  width: 42px;
+}
