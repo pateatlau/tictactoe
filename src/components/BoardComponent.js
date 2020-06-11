@@ -1,12 +1,7 @@
-import React, { setState, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import {
-  initGame,
-  setBoardSquares,
-  setGameOver,
-  updatePlayerGamesWon,
-} from "./../redux";
+import { initGame, setGameOver, updatePlayerGamesWon } from "./../redux";
 import BoardPlayerInfoComponent from "./BoardPlayerInfoComponent";
 import SquareComponent from "./SquareComponent";
 import { calculateWinner } from "../utils/helperFunctions";
@@ -17,40 +12,22 @@ const BoardComponent = () => {
     (state) => state.players
   );
 
-  const [winner, setWinner] = useState(null);
-  const [isDraw, setIsDraw] = useState(false);
-
   const gameState = useSelector((state) => state.game);
-  //TODO: const boardSquares = gameState.boardSquares;
-  console.log("BoardComponent: gameState = ", gameState);
 
   const dispatch = useDispatch();
 
   const [boardSquares, setBoardSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
-  console.log("BoardComponent: boardSquares = ", boardSquares);
 
   const handleClick = (index) => {
-    console.log(index);
-
-    // Copy our board state
     const squares = [...boardSquares];
-    console.log("boardSquares", boardSquares);
 
-    // If the index of the board is filled, return
     if (calculateWinner(boardSquares) || squares[index]) {
       return;
     }
 
-    // Add X or O
     squares[index] = xIsNext ? "X" : "O";
-
-    // Set the state of the board
-    // TODO:
-    // dispatch(setBoardSquares(squares));
     setBoardSquares(squares);
-
-    // Set the state of the turn
     setXIsNext(!xIsNext);
   };
 
@@ -69,26 +46,11 @@ const BoardComponent = () => {
     );
   };
 
-  console.log(
-    "JUST BEFORE CALLING WINNING PATTERN: BoardComponent: boardSquares = ",
-    boardSquares
-  );
   const winningPattern = calculateWinner(boardSquares);
-  if (winningPattern) {
-    setWinner(boardSquares[winningPattern[0]]);
-  }
-
-  if (!winner & boardSquares.every((square) => square !== null)) {
-    setIsDraw(true);
-  }
-
-  console.log("isDraw = ", isDraw);
-
-  console.log("winningPattern = ", winningPattern);
-  console.log("winner = ", winner);
+  const winner = winningPattern ? winningPattern[0] : null;
+  const isDraw = !winner && boardSquares.every((square) => square !== null);
 
   useEffect(() => {
-    console.log("useEffect dispatch initGAME");
     dispatch(initGame());
   }, []);
 
@@ -102,22 +64,13 @@ const BoardComponent = () => {
       isGameOver: true,
     };
 
-    console.log("USEEFFECTTTTTT");
-
-    if (isDraw || winner) {
-      alert("DRAW OR WIN. Press OK to continue");
-      dispatch(initGame());
-    }
-
     if (winner) {
       dispatch(updatePlayerGamesWon(playersPayload));
-      console.log("GAMESTATE.MAXWINS = ", gameState.maxWins);
+    }
 
-      if (playersPayload.gamesWon === 1) {
-        // gameState.maxWins) {
-        // update game over
-        dispatch(setGameOver(gamePayload));
-      }
+    if (isDraw || winner) {
+      alert("Press OK to continue");
+      dispatch(setGameOver(gamePayload));
     }
   }, [isDraw, winner]);
 

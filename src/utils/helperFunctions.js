@@ -14,12 +14,10 @@ const calculateWinner = (squares) => {
     const [a, b, c] = winningPatterns[i];
 
     if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c]) {
-      console.log("winner found");
       return winningPatterns[i];
     }
   }
 
-  console.log("Winner not found");
   return null;
 };
 

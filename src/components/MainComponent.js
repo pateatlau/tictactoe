@@ -10,11 +10,6 @@ const MainComponent = () => {
   const playersState = useSelector((state) => state.players);
   const isGameOver = useSelector((state) => state.game.isGameOver);
 
-  console.log("MAIN COMPONENT: ");
-  console.log("isPlayersFormSubmitted = ", playersState.isPlayersFormSubmitted);
-  console.log("player1 = ", playersState.user1);
-  console.log("isGameOver = ", isGameOver);
-
   let componentToRender;
 
   if (!playersState.isPlayersFormSubmitted) {

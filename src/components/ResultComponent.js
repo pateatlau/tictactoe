@@ -4,14 +4,10 @@ import { useSelector } from "react-redux";
 import "./ResultComponent.css";
 
 const ResultComponent = () => {
-  console.log("RESULT COMPONENT: ");
   const { player1, player2, player1GamesWon, player2GamesWon } = useSelector(
     (state) => state.players
   );
-  console.log("player1 =", player1);
-  console.log("player2 =", player2);
-  console.log("player1GamesWon =", player1GamesWon);
-  console.log("player2GamesWon =", player2GamesWon);
+
   const winner =
     player1GamesWon >= player2GamesWon
       ? { number: 1, name: player1, symbol: "X" }

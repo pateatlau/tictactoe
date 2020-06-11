@@ -7,7 +7,6 @@ import LogoComponent from "./components/LogoComponent";
 import MainComponent from "./components/MainComponent";
 
 function App() {
-  console.log("App");
   return (
     <Provider store={store}>
       <div className="App">

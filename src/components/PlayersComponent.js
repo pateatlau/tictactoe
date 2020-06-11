@@ -7,12 +7,10 @@ import "./PlayersComponent.css";
 import PlayerInputComponent from "./PlayerInputComponent";
 
 const PlayersComponent = () => {
-  console.log("PLAYERS COMPONENT: ");
   const dispatch = useDispatch();
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmitForm = (formData) => {
-    console.log("ONSUBMITFORM: The status of formData", formData);
     dispatch(initPlayers(formData));
   };
 

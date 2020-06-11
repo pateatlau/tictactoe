@@ -9,9 +9,6 @@ const initialState = {
 };
 
 const playersReducer = (state = initialState, action) => {
-  console.log("PLAYERSREDUCER: state = ", state);
-  console.log("PLAYERSREDUCER: action = ", action);
-
   switch (action.type) {
     case INIT_PLAYERS:
       return {
@@ -24,8 +21,6 @@ const playersReducer = (state = initialState, action) => {
       };
 
     case UPDATE_PLAYER_GAMES_WON:
-      console.log("UPDATE_PLAYER_GAMES_WON: state = ", state);
-      console.log("UPDATE_PLAYER_GAMES_WON: action = ", action);
       return action.payload.player === 1
         ? {
             ...state,
